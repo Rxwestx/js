@@ -7,23 +7,20 @@ const answers = [
 ];
 const correct = "ニンテンドーDS";
 
-//定数の文字列をHTMLに反映させる
-document.getElementById("js-question").textContent = question;
+//クイズ問題
+const setupQuiz = () => {
+  document.getElementById("js-question").textContent = question;
+  let buttonIndex = 0;
+  let buttonLength = $button.length;
+  while (buttonIndex < buttonLength) {
+    $button[buttonIndex].textContent = answers[buttonIndex];
+    buttonIndex++;
+  }
+};
 
 const $button = document.getElementsByTagName("button");
 
-// $button[0].textContent = answers[0];
-// $button[1].textContent = answers[1];
-// $button[2].textContent = answers[2];
-// $button[3].textContent = answers[3];
-
 // buttonをループ文にて再設計
-let buttonIndex = 0;
-let buttonLength = $button.length;
-while (buttonIndex < buttonLength) {
-  $button[buttonIndex].textContent = answers[buttonIndex];
-  buttonIndex++;
-}
 
 //ボタンをクリックされたら正誤判定
 document.getElementsByTagName("button")[0].addEventListener("click", () => {
