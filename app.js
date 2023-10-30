@@ -7,7 +7,9 @@ const answers = [
 ];
 const correct = "ニンテンドーDS";
 
-//クイズ問題
+const $button = document.getElementsByTagName("button");
+
+//クイズ問題文、選択肢を定義
 const setupQuiz = () => {
   document.getElementById("js-question").textContent = question;
   let buttonIndex = 0;
@@ -17,8 +19,7 @@ const setupQuiz = () => {
     buttonIndex++;
   }
 };
-
-const $button = document.getElementsByTagName("button");
+setupQuiz();
 
 // buttonをループ文にて再設計
 
