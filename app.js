@@ -21,35 +21,25 @@ const setupQuiz = () => {
 };
 setupQuiz();
 
-// buttonをループ文にて再設計
+const clickHander = (e) => {
+  if (correct === e.target.textContent) {
+    window.alert("正解!!");
+  } else {
+    window.alert("不正解");
+  }
+};
 
 //ボタンをクリックされたら正誤判定
-document.getElementsByTagName("button")[0].addEventListener("click", (e) => {
-  if (correct === document.getElementsByTagName("button")[0].textContent) {
-    window.alert("正解!!");
-  } else {
-    window.alert("不正解");
-  }
+$button[0].addEventListener("click", (e) => {
+  clickHander(e);
 });
-document.getElementsByTagName("button")[1].addEventListener("click", (e) => {
-  if (correct === document.getElementsByTagName("button")[1].textContent) {
-    window.alert("正解!!");
-  } else {
-    window.alert("不正解");
-  }
+$button[1].addEventListener("click", (e) => {
+  clickHander(e);
 });
-document.getElementsByTagName("button")[2].addEventListener("click", (e) => {
-  if (correct === document.getElementsByTagName("button")[2].textContent) {
-    window.alert("正解!!");
-  } else {
-    window.alert("不正解");
-  }
+$button[2].addEventListener("click", (e) => {
+  clickHander(e);
 });
 
-document.getElementsByTagName("button")[3].addEventListener("click", (e) => {
-  if (correct === document.getElementsByTagName("button")[3].textContent) {
-    window.alert("正解!!");
-  } else {
-    window.alert("不正解");
-  }
+$button[3].addEventListener("click", (e) => {
+  clickHander(e);
 });
