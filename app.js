@@ -10,7 +10,7 @@ const quiz = [
     correct: "ニンテンドーDS",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？",
+    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？?",
     answers: [
       "スーパーファミコン",
       "プレイステーション２",
@@ -20,7 +20,7 @@ const quiz = [
     correct: "ニンテンドーDS",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？",
+    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？??",
     answers: [
       "スーパーファミコン",
       "プレイステーション２",
@@ -30,15 +30,17 @@ const quiz = [
     correct: "ニンテンドーDS",
   },
 ];
+const quizLength = quiz.length;
+let quizIndex = 0;
 
-const question = "ゲーム市場、最も売れたゲーム機は次のうちどれ？";
-const answers = [
-  "スーパーファミコン",
-  "プレイステーション２",
-  "ニンテンドースイッチ",
-  "ニンテンドーDS",
-];
-const correct = "ニンテンドーDS";
+// const question = "ゲーム市場、最も売れたゲーム機は次のうちどれ？";
+// const answers = [
+//   "スーパーファミコン",
+//   "プレイステーション２",
+//   "ニンテンドースイッチ",
+//   "ニンテンドーDS",
+// ];
+// const correct = "ニンテンドーDS";
 
 const $button = document.getElementsByTagName("button");
 const buttonLength = $button.length;
@@ -60,6 +62,7 @@ const clickHandler = (e) => {
   } else {
     window.alert("不正解");
   }
+  // クイズを回す命令文追加
 };
 
 //ボタンをクリックされたら正誤判定
