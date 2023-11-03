@@ -47,22 +47,30 @@ const buttonLength = $button.length;
 
 //クイズ問題文、選択肢を定義
 const setupQuiz = () => {
-  document.getElementById("js-question").textContent = question;
+  document.getElementById("js-question").textContent = quiz[quizIndex].question;
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
-    $button[buttonIndex].textContent = answers[buttonIndex];
+    $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
     buttonIndex++;
   }
 };
 setupQuiz();
 
 const clickHandler = (e) => {
-  if (correct === e.target.textContent) {
+  if (quiz[quizIndex].correct === e.target.textContent) {
     window.alert("正解!!");
   } else {
     window.alert("不正解");
   }
   // クイズを回す命令文追加
+  quizIndex++;
+  if (quizIndex < quizLength) {
+    // 問題数があればこちらを実行
+    setupQuiz();
+  } else {
+    // 問題数がなければこちらを実行
+    window.alert("終了!!");
+  }
 };
 
 //ボタンをクリックされたら正誤判定
