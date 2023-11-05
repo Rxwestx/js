@@ -1,11 +1,11 @@
 const quiz = [
   {
-    question: "10進数27はASCIIではをどう表記する？",
+    question: "10進数27はASCIIではどのような表示になる？",
     answers: ["NUL", "@", "ESC", "10", "A"],
     correct: "ESC",
   },
   {
-    question: "高水準言語で最初に出来たといわれているプログラミング言語は？",
+    question: "高水準言語で最初にできたと言われているプログラミング言語は？",
     answers: ["アセンブル", "COBOL", "R", "FORTRAN", "BASIC"],
     correct: "FORTRAN",
   },
@@ -26,9 +26,9 @@ const quiz = [
       "オブジェクトプログラム",
       "バイナリデータ",
       "0010",
-      "どれも２進数",
+      "該当なし",
     ],
-    correct: "どれも２進数",
+    correct: "該当なし",
   },
 ];
 const quizLength = quiz.length;
