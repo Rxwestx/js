@@ -1,46 +1,39 @@
 const quiz = [
   {
-    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？",
-    answers: [
-      "スーパーファミコン",
-      "プレイステーション２",
-      "ニンテンドースイッチ",
-      "ニンテンドーDS",
-    ],
-    correct: "ニンテンドーDS",
+    question: "10進数27はASCIIではをどう表記する？",
+    answers: ["NUL", "@", "ESC", "10", "A"],
+    correct: "ESC",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？?",
-    answers: [
-      "スーパーファミコン",
-      "プレイステーション２",
-      "ニンテンドースイッチ",
-      "ニンテンドーDS",
-    ],
-    correct: "ニンテンドーDS",
+    question: "高水準言語で最初に出来たといわれているプログラミング言語は？",
+    answers: ["アセンブル", "COBOL", "R", "FORTRAN", "BASIC"],
+    correct: "FORTRAN",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次のうちどれ？??",
+    question: "Windowsの実行ファイルの拡張子は？",
+    answers: [".exe", ".dmg", ".app", ".msi", ".csv", ".env"],
+    correct: ".exe",
+  },
+  {
+    question: "コンパイルが必要な言語は？",
+    answers: ["Go", "perl", "sass", "Ruby", "どれも当てはまらない"],
+    correct: "Go",
+  },
+  {
+    question: "次のうち、２進数でないのはどれ？",
     answers: [
-      "スーパーファミコン",
-      "プレイステーション２",
-      "ニンテンドースイッチ",
-      "ニンテンドーDS",
+      "機械語",
+      "オブジェクトプログラム",
+      "バイナリデータ",
+      "0010",
+      "どれも２進数",
     ],
-    correct: "ニンテンドーDS",
+    correct: "どれも２進数",
   },
 ];
 const quizLength = quiz.length;
 let quizIndex = 0;
 let score = 0;
-// const question = "ゲーム市場、最も売れたゲーム機は次のうちどれ？";
-// const answers = [
-//   "スーパーファミコン",
-//   "プレイステーション２",
-//   "ニンテンドースイッチ",
-//   "ニンテンドーDS",
-// ];
-// const correct = "ニンテンドーDS";
 
 const $button = document.getElementsByTagName("button");
 const buttonLength = $button.length;
@@ -82,17 +75,3 @@ while (handlerIndex < buttonLength) {
   });
   handlerIndex++;
 }
-
-// $button[0].addEventListener("click", (e) => {
-//   clickHander(e);
-// });
-// $button[1].addEventListener("click", (e) => {
-//   clickHander(e);
-// });
-// $button[2].addEventListener("click", (e) => {
-//   clickHander(e);
-// });
-
-// $button[3].addEventListener("click", (e) => {
-//   clickHander(e);
-// });
